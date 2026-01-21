@@ -42,3 +42,19 @@ export interface OptimizationOpportunity {
     potentialSavings?: number;
     impact: 'low' | 'medium' | 'high';
 }
+
+export interface HealthIncident {
+    id: string;
+    serviceName: string;
+    region: string;
+    status: 'resolved' | 'investigating' | 'ongoing';
+    severity: 'low' | 'medium' | 'high';
+    startTime: string;
+    endTime?: string;
+    description: string;
+}
+
+export interface UsageReport {
+    serviceName: string;
+    data: { timestamp: string; value: number }[];
+}
